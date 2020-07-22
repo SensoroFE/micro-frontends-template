@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './index.less';
 
-export default () => {
+export default props => {
+  const { children } = props;
   return (
     <div
       style={{
@@ -13,6 +14,7 @@ export default () => {
       }}
     >
       <h1 className={styles.title}>master</h1>
+      {children}
     </div>
   );
 };

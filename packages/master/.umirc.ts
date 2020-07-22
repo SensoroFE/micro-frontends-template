@@ -10,15 +10,15 @@ export default defineConfig({
       apps: [
         {
           name: 'app1', // 唯一 id
-          entry: '//localhost:7001', // html entry
+          entry: 'http://localhost:7001/', // html entry
         },
         {
           name: 'app2', // 唯一 id
-          entry: '//localhost:7002', // html entry
+          entry: 'http://localhost:7002/', // html entry
         },
         {
           name: 'app3', // 唯一 id
-          entry: '//localhost:7003', // html entry
+          entry: 'http://localhost:7003/', // html entry
         },
       ],
     },
@@ -30,12 +30,14 @@ export default defineConfig({
       routes: [
         {
           path: '/app1',
+          // component: '@/pages/index2',
           microApp: 'app1',
           // settings: { singular: false },
         },
         {
           path: '/app2',
-          microApp: 'app2',
+          // microApp: 'app2',
+          component: '@/pages/index2',
         },
         {
           path: '/app3',
