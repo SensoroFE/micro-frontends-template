@@ -1,10 +1,20 @@
 import React from 'react';
-import { MicroApp } from 'umi';
+import styles from './index.less';
 
-export default () => {
+export default props => {
+  const { children } = props;
   return (
-    <div>
-      <MicroApp name="app2" />
+    <div
+      style={{
+        position: 'absolute',
+        top: '0px',
+        bottom: '0px',
+        left: '0px',
+        right: '0px',
+      }}
+    >
+      <h1 className={styles.title}>master2222--->>></h1>
+      {children}
     </div>
   );
 };

@@ -9,6 +9,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
+  "homepage": "/master",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
