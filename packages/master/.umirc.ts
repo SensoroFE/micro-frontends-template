@@ -1,5 +1,16 @@
 import { defineConfig } from 'umi';
 
+function defineApp(app: { name: string; entry: string }) {
+  if (process.env.NODE_ENV === 'production') {
+    return {
+      ...app,
+      entry: `http://localhost:8090/${app.name}`,
+    };
+  } else {
+    return app;
+  }
+}
+
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
@@ -10,18 +21,18 @@ export default defineConfig({
     master: {
       // 注册子应用信息
       apps: [
-        {
+        defineApp({
           name: 'app1', // 唯一 id
-          entry: 'http://localhost:8090/app1', // html entry
-        },
-        {
+          entry: 'http://localhost:7001', // html entry
+        }),
+        defineApp({
           name: 'app2', // 唯一 id
-          entry: 'http://localhost:8090/app2', // html entry
-        },
-        {
+          entry: 'http://localhost:7002', // html entry
+        }),
+        defineApp({
           name: 'app3', // 唯一 id
-          entry: 'http://localhost:8090/app3', // html entry
-        },
+          entry: 'http://localhost:7003', // html entry
+        }),
       ],
     },
   },
@@ -32,7 +43,7 @@ export default defineConfig({
       routes: [
         {
           path: '/',
-          redirect: '/app1'
+          redirect: '/app1',
         },
         {
           path: '/app1',
