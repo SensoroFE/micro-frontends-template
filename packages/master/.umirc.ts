@@ -10,15 +10,16 @@ function defineApp(app: { name: string; entry: string }) {
     return app;
   }
 }
-
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
   base: '/master',
   publicPath: '/master/',
+  runtimePublicPath: true,
   qiankun: {
     master: {
+      sandbox:true,
       // 注册子应用信息
       apps: [
         defineApp({
