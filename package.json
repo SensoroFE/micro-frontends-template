@@ -1,7 +1,9 @@
 {
-  "name": "root",
+  "name": "micro-frontend-template",
+  "description": "微前端实践模板",
   "private": true,
   "scripts": {
+    "bootstrap": "npx lerna bootstrap",
     "start": "lerna run start --parallel",
     "build": "lerna run build",
     "release": "./scripts/release.sh"
