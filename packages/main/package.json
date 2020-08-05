@@ -1,5 +1,6 @@
 {
-  "name": "app1",
+  "name": "@sensoro/main",
+  "description": "微前端主项目",
   "private": true,
   "scripts": {
     "start": "umi dev",
@@ -9,7 +10,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "homepage": "/app1",
+  "homepage": "/master",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "master",
+  "name": "@sensoro/dashboard",
   "private": true,
   "scripts": {
     "start": "umi dev",
@@ -9,7 +9,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "homepage": "/master",
+  "homepage": "/dashboard",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },

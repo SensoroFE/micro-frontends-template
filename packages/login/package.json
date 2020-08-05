@@ -1,5 +1,5 @@
 {
-  "name": "app2",
+  "name": "@sensoro/login",
   "private": true,
   "scripts": {
     "start": "umi dev",
@@ -9,7 +9,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "homepage": "/app2",
+  "homepage": "/login",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },

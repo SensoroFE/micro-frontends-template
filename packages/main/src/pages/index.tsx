@@ -13,7 +13,7 @@ export default props => {
         right: '0px',
       }}
     >
-      <h1 className={styles.title}>master</h1>
+      <h1 className={styles.title}>main page</h1>
       {children}
     </div>
   );

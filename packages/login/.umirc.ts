@@ -4,7 +4,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  publicPath: '/app1/',
+  publicPath: '/login/',
   routes: [
     { path: '/', component: '@/pages/index' },
   ],

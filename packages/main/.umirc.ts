@@ -4,36 +4,41 @@ function defineApp(app: { name: string; entry: string }) {
   if (process.env.NODE_ENV === 'production') {
     return {
       ...app,
-      entry: `http://localhost:8090/${app.name}`,
+      entry: `http://localhost:9000/${app.name}`,
     };
   } else {
     return app;
   }
 }
+
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  base: '/master',
-  publicPath: '/master/',
+  base: '/main',
+  publicPath: '/main/',
   runtimePublicPath: true,
   qiankun: {
     master: {
       sandbox:true,
-      // 注册子应用信息
+      /**
+       * 注册子应用信息
+       *
+       * name 唯一 推荐使用目录名
+       */
       apps: [
         defineApp({
-          name: 'app1', // 唯一 id
-          entry: 'http://localhost:7001', // html entry
+          name: 'account',
+          entry: 'http://localhost:9001',
         }),
         defineApp({
-          name: 'app2', // 唯一 id
-          entry: 'http://localhost:7002', // html entry
+          name: 'dashboard',
+          entry: 'http://localhost:9002',
         }),
         defineApp({
-          name: 'app3', // 唯一 id
-          entry: 'http://localhost:7003', // html entry
-        }),
+          name: 'login',
+          entry: 'http://localhost:9003',
+        })
       ],
     },
   },
@@ -44,22 +49,19 @@ export default defineConfig({
       routes: [
         {
           path: '/',
-          redirect: '/app1',
+          redirect: '/login',
         },
         {
-          path: '/app1',
-          // component: '@/pages/index2',
-          microApp: 'app1',
-          // settings: { singular: false },
+          path: '/login',
+          microApp: 'login',
         },
         {
-          path: '/app2',
-          microApp: 'app2',
-          // component: '@/pages/index2',
+          path: '/dashboard',
+          microApp: 'dashboard',
         },
         {
-          path: '/app3',
-          microApp: 'app3',
+          path: '/account',
+          microApp: 'account',
         },
         {
           path: '/master',
