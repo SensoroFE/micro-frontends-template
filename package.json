@@ -1,6 +1,6 @@
 {
   "name": "micro-frontend-template",
-  "description": "微前端实践模板",
+  "description": "微前端开发模板",
   "private": true,
   "scripts": {
     "bootstrap": "npx lerna bootstrap",
