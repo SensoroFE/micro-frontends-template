@@ -1,6 +1,7 @@
 {
   "name": "@sensoro/login",
   "private": true,
+  "version": "1.0.0",
   "scripts": {
     "start": "umi dev",
     "build": "umi build",

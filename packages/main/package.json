@@ -1,6 +1,7 @@
 {
   "name": "@sensoro/main",
   "description": "微前端主项目",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "umi dev",
