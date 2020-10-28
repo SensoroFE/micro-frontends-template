@@ -5,9 +5,11 @@ export default defineConfig({
     type: 'none',
   },
   publicPath: '/login/',
-  routes: [
-    { path: '/', component: '@/pages/index' },
-  ],
+  locale: {
+    default: 'zh-CN',
+    antd: true,
+    baseNavigator: true
+  },
   qiankun: {
     slave: {}
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@sensoro/login",
+  "name": "@micro-frontend/login",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -8,12 +8,15 @@
   },
   "homepage": "/login",
   "dependencies": {
-    "@umijs/preset-react": "1.6.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "umi": "^3.2.17"
+    "@ant-design/pro-layout": "^6.5.9",
+    "@umijs/preset-react": "1.6.16",
+    "classnames": "^2.2.6",
+    "js-cookie": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "umi": "^3.2.24"
   },
   "devDependencies": {
-    "@umijs/plugin-qiankun": "^2.9.1"
+    "@umijs/plugin-qiankun": "^2.17.3"
   }
 }
