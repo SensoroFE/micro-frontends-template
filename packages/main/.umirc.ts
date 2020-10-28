@@ -51,28 +51,24 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      routes: [
-        {
-          path: '/',
-          redirect: '/dashboard',
-        },
-        {
-          path: '/login',
-          microApp: 'login',
-        },
-        {
-          path: '/dashboard',
-          microApp: 'dashboard',
-          menu: {
-            name: '首页',
-            icon: 'dashboard',
-          },
-        },
-        {
-          path: '/account',
-          microApp: 'account',
-        }
-      ],
+      redirect: '/dashboard',
     },
+    {
+      path: '/login',
+      microApp: 'login',
+      layout: false
+    },
+    {
+      path: '/dashboard',
+      microApp: 'dashboard',
+      menu: {
+        name: '首页',
+        icon: 'dashboard',
+      },
+    },
+    {
+      path: '/account',
+      microApp: 'account',
+    }
   ],
 });

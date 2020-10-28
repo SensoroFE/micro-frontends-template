@@ -25,6 +25,10 @@ export const layout = ({
       //   history.push('/login');
       // }
     },
+    locale: 'zh-CN',
+    menu: {
+      locale: false,
+    },
     menuHeaderRender: undefined,
     ...initialState?.settings,
     logo: logo
