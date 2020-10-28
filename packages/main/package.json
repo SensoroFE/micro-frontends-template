@@ -1,5 +1,5 @@
 {
-  "name": "@sensoro/main",
+  "name": "@micro-frontend/main",
   "description": "微前端主项目",
   "version": "1.0.0",
   "private": true,
@@ -9,13 +9,15 @@
   },
   "homepage": "/",
   "dependencies": {
-    "@ant-design/pro-layout": "^6.4.12",
-    "@umijs/preset-react": "1.6.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "umi": "^3.2.17"
+    "@ant-design/pro-layout": "^6.5.9",
+    "@umijs/preset-react": "1.6.16",
+    "querystring": "^0.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "umi": "^3.2.24",
+    "use-merge-value": "^1.0.2"
   },
   "devDependencies": {
-    "@umijs/plugin-qiankun": "^2.5.1"
+    "@umijs/plugin-qiankun": "^2.17.3"
   }
 }

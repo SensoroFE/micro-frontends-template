@@ -20,7 +20,7 @@ export default defineConfig({
   runtimePublicPath: true,
   qiankun: {
     master: {
-      sandbox:true,
+      sandbox: true,
       /**
        * 注册子应用信息
        *
@@ -42,14 +42,19 @@ export default defineConfig({
       ],
     },
   },
+  antd: {},
+  layout: {
+    name: '微前端开发模板',
+    locale: true,
+    siderWidth: 240
+  },
   routes: [
     {
       path: '/',
-      component: '@/pages/index',
       routes: [
         {
           path: '/',
-          redirect: '/login',
+          redirect: '/dashboard',
         },
         {
           path: '/login',
@@ -58,15 +63,15 @@ export default defineConfig({
         {
           path: '/dashboard',
           microApp: 'dashboard',
+          menu: {
+            name: '首页',
+            icon: 'dashboard',
+          },
         },
         {
           path: '/account',
           microApp: 'account',
-        },
-        {
-          path: '/master',
-          component: '@/pages/index2',
-        },
+        }
       ],
     },
   ],
